@@ -283,8 +283,6 @@ void run_rk_check()
     if (rootcheck.notify != QUEUE) {
         printf("\n");
         printf("- Scan completed in %d seconds.\n\n", (int)(time2 - time1));
-    } else {
-        sleep(5);
     }
 
     /* Send scan ending message */
@@ -321,7 +319,6 @@ void * w_rootcheck_thread(__attribute__((unused)) void * args) {
                 prev_time_rk = time(0);
             }
         }
-        sleep(1);
     }
 
 #ifndef WIN32
